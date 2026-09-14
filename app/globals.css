@@ -28,3 +28,14 @@ body {
   background: #233229;
   border-radius: 8px;
 }
+
+/* permite rolagem horizontal (ex: abas de dias em telas estreitas) sem
+   exibir a barra de rolagem */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge legado */
+  -webkit-overflow-scrolling: touch;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}

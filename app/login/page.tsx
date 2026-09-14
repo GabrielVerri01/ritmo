@@ -19,7 +19,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-base px-6">
       <div className="w-full max-w-sm">
-        <div className="mb-10 flex items-center gap-3">
+        <div className="mb-10 flex items-center gap-3 justify-center">
           <span className="relative flex h-3 w-3">
             <span className="absolute inline-flex h-full w-full rounded-full bg-pulse animate-pulse-ring" />
             <span className="relative inline-flex h-3 w-3 rounded-full bg-pulse" />
@@ -43,7 +43,7 @@ export default function LoginPage() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Como podemos te chamar"
+              placeholder="Nome"
               className="w-full rounded-card bg-base-raised border border-line px-4 py-3 text-ink placeholder:text-ink-faint outline-none focus:border-pulse transition-colors"
             />
           </div>

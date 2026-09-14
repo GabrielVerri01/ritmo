@@ -30,4 +30,5 @@ export interface UserProfile {
   name: string;
   email: string;
   routineGoal?: string;
+  gymName?: string;
 }

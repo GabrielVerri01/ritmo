@@ -7,10 +7,18 @@ import WeekdaySelector from "./WeekdaySelector";
 
 export default function AddActivityModal({
   defaultDay,
+  heading = "Nova atividade",
+  nameLabel = "Nome da atividade",
+  namePlaceholder = "Ex: Ler um livro",
+  submitLabel = "Adicionar",
   onClose,
   onCreate,
 }: {
   defaultDay: WeekDay;
+  heading?: string;
+  nameLabel?: string;
+  namePlaceholder?: string;
+  submitLabel?: string;
   onClose: () => void;
   onCreate: (title: string, startTime: string, daysActive: WeekDay[]) => void;
 }) {
@@ -38,7 +46,7 @@ export default function AddActivityModal({
       >
         <div className="flex items-center justify-between mb-5">
           <h2 className="font-head text-base font-semibold text-ink">
-            Nova atividade
+            {heading}
           </h2>
           <button
             onClick={onClose}
@@ -52,13 +60,13 @@ export default function AddActivityModal({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm text-ink-muted mb-1.5">
-              Nome da atividade
+              {nameLabel}
             </label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Ex: Ler um livro"
+              placeholder={namePlaceholder}
               autoFocus
               className="w-full rounded-card bg-base border border-line px-4 py-2.5 text-ink outline-none focus:border-pulse transition-colors"
             />
@@ -96,7 +104,7 @@ export default function AddActivityModal({
               disabled={!canSubmit}
               className="rounded-card bg-pulse px-4 py-2 text-sm font-medium text-base disabled:opacity-40 disabled:cursor-not-allowed transition-opacity"
             >
-              Adicionar
+              {submitLabel}
             </button>
           </div>
         </form>

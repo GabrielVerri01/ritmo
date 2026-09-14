@@ -54,7 +54,7 @@ function AtividadePageInner() {
     return (
       <div>
         <TopBar title="Atividade" />
-        <div className="px-8 py-6">
+        <div className="px-4 sm:px-8 py-6">
           <button
             onClick={() => router.push("/atividades")}
             className="flex items-center gap-2 text-ink-faint hover:text-ink-muted text-sm transition-colors mb-4"
@@ -108,7 +108,7 @@ function AtividadePageInner() {
   return (
     <div>
       <TopBar title={`${activity.title} · ${weekDayLabels[day]}`} />
-      <div className="px-8 py-6 max-w-xl">
+      <div className="px-4 sm:px-8 py-6 max-w-xl">
         <button
           onClick={() => router.push("/atividades")}
           className="flex items-center gap-2 text-ink-faint hover:text-ink-muted text-sm transition-colors mb-5"
@@ -215,8 +215,8 @@ function AtividadePageInner() {
               }`}
             >
               <span
-                className={`absolute top-0.5 h-5 w-5 rounded-full bg-base transition-transform ${
-                  config.active ? "translate-x-5" : "translate-x-0.5"
+                className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-base transition-transform ${
+                  config.active ? "translate-x-5" : "translate-x-0"
                 }`}
               />
             </button>

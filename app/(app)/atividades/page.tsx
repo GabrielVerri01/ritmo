@@ -39,15 +39,15 @@ export default function AtividadesPage() {
     <div>
       <TopBar title="Atividades" />
 
-      <div className="border-b border-line px-8">
-        <div className="flex gap-1 max-w-2xl">
+      <div className="border-b border-line px-4 sm:px-8">
+        <div className="flex gap-1 max-w-2xl overflow-x-auto scrollbar-hide">
           {weekDayOrder.map((day) => {
             const isSelected = day === selectedDay;
             return (
               <button
                 key={day}
                 onClick={() => setSelectedDay(day)}
-                className={`px-4 py-3 text-sm font-medium border-b-2 -mb-px whitespace-nowrap transition-colors ${
+                className={`px-4 py-3 text-sm font-medium border-b-2 -mb-px whitespace-nowrap shrink-0 transition-colors ${
                   isSelected
                     ? "border-pulse text-ink"
                     : "border-transparent text-ink-muted hover:text-ink"
@@ -60,7 +60,7 @@ export default function AtividadesPage() {
         </div>
       </div>
 
-      <div className="px-8 py-6 max-w-2xl">
+      <div className="px-4 sm:px-8 py-6 max-w-2xl">
         <div className="flex items-center justify-between gap-4 mb-6">
           <p className="text-ink-muted text-sm">
             Rotina de {weekDayLabels[selectedDay].toLowerCase()}.

@@ -15,7 +15,7 @@ export default function TopBar({ title }: { title: string }) {
   const initial = profile?.name?.charAt(0).toUpperCase() || "?";
 
   return (
-    <header className="h-16 border-b border-line flex items-center justify-between px-8">
+    <header className="h-16 border-b border-line flex items-center justify-between px-4 sm:px-8">
       <h1 className="font-head text-lg font-semibold text-ink">{title}</h1>
 
       <Link

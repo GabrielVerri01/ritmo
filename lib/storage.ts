@@ -201,3 +201,9 @@ export function getProfile(): UserProfile {
   const raw = window.localStorage.getItem(PROFILE_KEY);
   return raw ? (JSON.parse(raw) as UserProfile) : { name: "", email: "" };
 }
+
+export function updateProfile(patch: Partial<UserProfile>) {
+  const updated = { ...getProfile(), ...patch };
+  window.localStorage.setItem(PROFILE_KEY, JSON.stringify(updated));
+  return updated;
+}

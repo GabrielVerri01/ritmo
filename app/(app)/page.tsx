@@ -28,7 +28,7 @@ export default function HomePage() {
   return (
     <div>
       <TopBar title="Hoje" />
-      <div className="px-8 py-6 max-w-2xl">
+      <div className="px-4 sm:px-8 py-6 max-w-2xl">
         <p className="text-ink-muted text-sm mb-6">
           {todays.filter((a) => a.schedule[today]!.active).length} atividades
           programadas para hoje.
